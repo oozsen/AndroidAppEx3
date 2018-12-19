@@ -56,7 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalculateActivity.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Numbers.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -92,6 +94,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2" />
   </ItemGroup>
   <ItemGroup>

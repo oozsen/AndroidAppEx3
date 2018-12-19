@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/txtResult" />
     <Button
-        android:text="Done- CallBeck"
+        android:text="Done- CallBack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnDone" />

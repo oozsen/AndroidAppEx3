@@ -4,6 +4,7 @@ using Android.OS;
 using Android.Support.V7.App;
 using Android.Content;
 using Android.Runtime;
+using Newtonsoft.Json;
 
 namespace AndroidAppEx3
 {
@@ -35,9 +36,19 @@ namespace AndroidAppEx3
             txtSum.Text = "Calculating...";
 
             var intent = new Intent(this, typeof(CalculateActivity));
-            intent.PutExtra("val1", txtVal1.Text);
-            intent.PutExtra("val2", txtVal2.Text);
-            StartActivityForResult(intent, 493);
+            //intent.PutExtra("val1", txtVal1.Text);
+            //intent.PutExtra("val2", txtVal2.Text);
+
+            Numbers _numbers = new Numbers
+            {
+                val1 = int.Parse(txtVal1.Text),
+                val2 = int.Parse(txtVal2.Text)
+            };
+
+            //intent.PutExtra("numbers", JsonConvert.SerializeObject(_numbers));
+            intent.PutExtra("numbers", _numbers.ToJson());
+
+            StartActivityForResult(intent, 493);            
         }
 
         protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
